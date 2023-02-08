@@ -1,0 +1,18 @@
+%%================================================
+%% Filename: a3cover.tex
+%% Encoding: UTF-8
+%% Created: 2017-05-20 
+%%================================================
+\documentclass{article}
+
+\usepackage[papersize={17.32in,11.69in}]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\includepdfmerge[nup=2x1, noautoscale, delta=0 0, pages={last-last, 1}]{spine.pdf, main.pdf, 1}
+
+\end{document}

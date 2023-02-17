@@ -2,10 +2,10 @@
 % !TeX program = xelatex
 % !TeX spellcheck = en_US
 
-\documentclass[bachelor]{zzuthesis}
-% \documentclass[%
-%   bachelor|master|doctor, % mandatory option
-%   openany|openright]{zzuthesis}
+%学位层次
+\documentclass[master]{zzuthesis}
+% \documentclass[bachelor|master|doctor, openany|openright]{zzuthesis}
+% bachelor本科，master硕士，doctor博士
 % 自定义宏包
 \usepackage{docutils}
 
@@ -45,8 +45,11 @@
 %% 文后
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
-\bibliographystyle{gbt-7714-2015-numerical}
-\bibliography{ref/test}%参考文献
+%格式
+%\bibliographystyle{gbt-7714-2015-numerical}
+%\bibliographystyle{gbt7714-unsrt.bst}%符合国标 GB/T 7714-2015 的文献风格
+\bibliographystyle{zzubib.bst}%学校规范中示例的格式
+\bibliography{ref/test}%参考文献的bib文件
 
 \makeatletter%致谢，研究生论文中在参考文献后，附录前
 \ifzzu@bachelor\else

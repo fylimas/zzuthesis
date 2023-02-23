@@ -8,19 +8,19 @@ zzuthesis最早由Xiaoshuai Yuan以清华大学thuthesis的LaTeX模版为蓝本�
 
 # 1. 使用方法
 
-首先，安装TeXLive+texstudio，或MiKTeX+texstudio，掌握基本的源代码、编译概念，以及文档的内容、样式概念；
+首先，安装MiKTeX+texstudio（或TeXLive+texstudio/由于TeXLive动辄xG，安装耗时30min+，不建议TeXLive；CTeX长时间未更新），**掌握基本的源代码、宏包、编译概念，以及文档的内容、样式概念**；注意，首次用到某宏包package时，MiKTeX需现场下载，这也是MiKTeX比TeXLive小的原因；
 
-然后，打开 `正文.tex` 阅读代码，编译查看代码与pdf的对应关系，大致清楚代码的作用；
+然后，**打开 `正文.tex` 阅读代码，编译查看代码与pdf的对应关系**，大致清楚代码的作用；
 
-最后，掌握1. 公式的输入，`\label{}`加标签，`\eqref{}`交叉引用；2. 图表的输入，`\label{}`加标签，`\ref{}`交叉引用；3. 参考文献bib文件基础，`\includebibliography{}`引入，`\cite{}`交叉引用，即可畅快自由的写论文。
+最后，**掌握1. 公式的输入，`\label{}`加标签，`\eqref{}`交叉引用；2. 图表的输入，`\label{}`加标签，`\ref{}`交叉引用；3. 参考文献bib文件基础，`\includebibliography{}`引入，`\cite{}`交叉引用**，即可畅快自由的写论文。
 
 完全不用纠结word的公式、图表、参考文献的图注、交叉引用的奇奇怪怪的问题！
 
 # 2. 模板编译
 
-## 2.1 编辑器编译
+## 2.1 编辑器编译【建议】
 
-点击texstudio编译按钮，自动根据magiccomment进行编译
+点击texstudio编译按钮，自动根据magic comment进行编译
 
 ## 2.2 手动编译
 

@@ -1,9 +1,8 @@
 %%================================================
 %% Filename: zzuthesis.cls
 %% Encoding: UTF-8
-%% Author: Yuan Xiaoshuai - yxshuai@gmail.com
-%% Created: 2012-01-08 13:11
-%% Last modified: 2016-08-31 09:13
+%% Based on: Yuan Xiaoshuai - yxshuai@gmail.com
+%% 最后修改：李方圆，2023年4月4日
 %%================================================
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 标识节(Identification)
@@ -429,7 +428,7 @@
   \ifzzu@bachelor\relax\else
   \zzu@chapter*{\listtablename}
   \@starttoc{lot}\fi}
-\titlecontents{chapter}[\z@]{\vspace{6bp}\sffamily\sihao[1]}
+\titlecontents{chapter}[\z@]{\vspace{6bp}\sihao[1]}%\sffamily
   {{\thecontentslabel}\quad}{}
   {\hspace{.5em}\titlerule*{.}\xiaosi\contentspage}
 \titlecontents{section}[2em]{\vspace{6bp} \xiaosi[1]}
@@ -624,25 +623,30 @@
       \end{center}}
   \vfill
   \end{center}}
-\newcommand{\zzu@authorization@mk}{%原创性声明及授权声明
+%学位论文原创性声明
+\newcommand{\zzu@authorization@mk}{
   \thispagestyle{zzu@empty}
   \vspace*{\stretch{1}}
   \begin{center}
-    \sffamily\sanhao \zzu@declarename
+    \rmfamily\bfseries\sanhao \zzu@declarename
   \end{center}
   \vskip 20pt
   \xiaosi[2]\zzu@declaretext
   \vskip 20pt
-  \zzu@authorsig\hfill\zzu@declaredate\hspace*{2em}
+  \zzu@authorsig\zzu@teachersig\\
+  \hfill\zzu@declaredate\hspace*{2em}
   \vspace*{\stretch{2}}
+  %学位论文使用授权声明
   \begin{center}
-    \sffamily\sanhao \zzu@authtitle
+    \rmfamily\bfseries\sanhao \zzu@authtitle
   \end{center}
   \vskip 20pt
   \xiaosi[2]\zzu@authorization
   \vskip 20pt
-  \zzu@authorsig\hfill\zzu@authdate\hspace*{2em}
+  \zzu@authorsig\zzu@teachersig\\
+  \hfill\zzu@declaredate\hspace*{2em}
   \vspace*{\stretch{2}}}
+
 \newcommand{\makecover}{%制作封面
   \phantomsection
   \pdfbookmark[-1]{\zzu@ctitle}{ctitle}
@@ -711,7 +715,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{ack}{%
     \if@openright\cleardoublepage\else\clearpage\fi
-    \zzu@chapter*{\zzu@ackname}
+    \zzu@chapter*{\raggedright\zzu@ackname}
     \fs\xiaosi[1.524]%仿宋五号，固定行距16磅
   }{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -730,7 +734,7 @@
 \DeclareRobustCommand\onlinecite{\@onlinecite}
 \def\@onlinecite#1{\begingroup\let\@cite\NAT@citenum\citep{#1}\endgroup}
 \renewenvironment{thebibliography}[1]{%
-   \zzu@chapter*{\bibname}%
+   \zzu@chapter*{\raggedright\bibname}%
    \wuhao[1.524]%宋体五号，行距16磅
    \list{\@biblabel{\@arabic\c@enumiv}}%
         {\renewcommand{\makelabel}[1]{##1\hfill}

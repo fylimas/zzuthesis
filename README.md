@@ -1,6 +1,6 @@
 # zzuthesis模版
 
-⚠️由于网络原因，github仓库可能下载速度很慢，请移步gitee（https://gitee.com/fylimas/zzuthesis）（但是下载gitee需要注册登录😂）。
+⚠️由于网络原因，github仓库可能下载速度很慢，请移步https://gitee.com/fylimas/zzuthesis ，但是从gitee下载，需要注册登录😂。
 
 zzuthesis模版是参照《郑州大学学位论文写作规范格式》编制的非官方LaTeX模版，目的是摆脱word公式、图表、参考文献的图注、交叉引用的奇奇怪怪的问题，并提前学习和了解学术界的事实排版工具TeX。
 

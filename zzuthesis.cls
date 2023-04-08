@@ -473,12 +473,15 @@
 \zzu@define@term{edate}
 \newcommand\zzu@underline[2][6em]{%
   \hskip\p@\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3\p@}
+\newcommand\zzu@nounderline[2][6em]{%
+	\hskip\p@\hb@xt@ #1{\hss#2\hss}\hskip3\p@}
 \newlength{\zzu@title@width}
 \def\zzu@put@title#1{\makebox{\hb@xt@\zzu@title@width{#1}}}
 \newcommand{\zzu@first@titlepage}{%论文中文封面
   \thispagestyle{zzu@empty}
   \begin{center}
-    \ifzzu@bachelor%%本科毕业论文
+%%%%本科毕业论文
+    \ifzzu@bachelor
       \vspace*{2.4cm}
       \hspace*{-1.3cm}{\yihao\bfseries\fs\zzu@schoolname\zzu@subtitle}
       \par\vskip2.4cm
@@ -527,7 +530,8 @@
         % \begin{center}
           % {\xiaosan\rmfamily\zzu@submitdate}
         % \end{center}
-    \else%研究生学位论文
+    \else
+%%%%研究生学位论文
       \noindent\begin{minipage}{.49\textwidth}
         \begin{flushleft}
           \includegraphics[width=3.35cm]{zzulogo}
@@ -562,24 +566,24 @@
         \def\arraystretch{1.5}%\arraystretch表格行距的缩放比例因子（缺省为1）
         \begin{tabular}{p{\zzu@title@width}l@{}l}
           \zzu@put@title{\zzu@author@title} &  \zzu@title@sep & 
-            \zzu@underline[150pt]{\zzu@cauthor}
+            \zzu@nounderline[150pt]{\zzu@cauthor}
         \\
           \zzu@put@title{\zzu@supervisor@title} &  \zzu@title@sep & 
-            \zzu@underline[150pt]{\zzu@csupervisor\hspace{1em}\zzu@protitle}
+            \zzu@nounderline[150pt]{\zzu@csupervisor\hspace{1em}\zzu@protitle}
         \\ 
           \zzu@put@title{\zzu@subject@title} &  \zzu@title@sep & 
-            \zzu@underline[150pt]{\zzu@csubject}
+            \zzu@nounderline[150pt]{\zzu@csubject}
         \\
           \zzu@put@title{\zzu@major@title} &  \zzu@title@sep & 
-            \zzu@underline[150pt]{\zzu@cmajor}
+            \zzu@nounderline[150pt]{\zzu@cmajor}
         \\
         \ifzzu@doctor\else
           \zzu@put@title{\zzu@department@title} &  \zzu@title@sep & 
-            \zzu@underline[150pt]{\zzu@cdepartment}
+            \zzu@nounderline[150pt]{\zzu@cdepartment}
         \\
         \fi
           \zzu@put@title{\zzu@cdate@title} &  \zzu@title@sep & 
-            \zzu@underline[150pt]{\zzu@cdate}
+            \zzu@nounderline[150pt]{\zzu@cdate}
         \end{tabular}\\
         \vskip \stretch{1}
       \end{center}

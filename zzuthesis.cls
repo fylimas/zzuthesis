@@ -9,7 +9,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{zzuthesis}
-[2016/08/28 4.1 Zhengzhou University Thesis Template]
+[2023/04/08 Zhengzhou University Thesis Template]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 声明选项(Declaration options)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,8 +83,12 @@
 	  Path=./fonts/,
   ]{STXingkai.ttf}%封面标题
   % \setCJKfamilyfont{vertfont}[RawFeature={vertical}]{Adobe Song Std}%竖直字体
-  \setmainfont{Times New Roman}
-  \setsansfont{Arial}
+  \setmainfont[
+  	BoldFont= * Bold,
+  	Path=./fonts/,]{Times New Roman}
+  \setsansfont[
+  	BoldFont= * Bold,
+  	Path=./fonts/,]{Arial}
   \setmonofont{Courier New}
 \RequirePackage[numbers,super,sort&compress]{natbib}%参考文献引用
 \RequirePackage{hyperref}%超链接、书签
@@ -218,7 +222,8 @@
   \let\@evenfoot=\@oddfoot}
 \def\ps@zzu@headings{%%Centred head, centred page number in foot.
   \def\@oddhead{\vbox to\headheight{%
-    \hb@xt@\textwidth{\wuhao\rmfamily\hfill\leftmark\hfill}%
+    \hb@xt@\textwidth{\wuhao\rmfamily\hfill\leftmark\hfill}%leftmark是chapter name
+    %https://en.wikibooks.org/wiki/LaTeX/Customizing_Page_Headers_and_Footers
       \vskip\tw@\p@\hbox{\vrule width\textwidth height.4\p@ depth\z@}}}
   \let\@evenhead=\@oddhead
   \def\@oddfoot{\wuhao\hfil\thepage\ifzzu@bachelor\relax\else\hfil\fi}
@@ -672,7 +677,7 @@
 %% 中英文摘要及关键词
 %% 中文摘要部分的标题为"摘要"(本科为"中文摘要"，黑体三号字)
 %%   关键词之间空两个汉字符宽度，悬挂缩进
-%% 英文摘要部分的标题为 Abstract，用 Arial 体三号字
+%% 英文摘要部分的标题为 Abstract，用 Arial 体三号字加粗
 %%   关键词之间空四个英文字符宽度，悬挂缩进
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\zzu@parse@keywords#1{%关键词分割
@@ -694,7 +699,7 @@
 \newenvironment{cabstract}
   {\zzu@chapter*[]{\cabstractname}}{}
 \newenvironment{eabstract}
- {\zzu@chapter*[]{\eabstractname}}{}
+ {\textbf{\zzu@chapter*[]{\eabstractname}}}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 主要符号对照表
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

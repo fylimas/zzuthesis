@@ -1,12 +1,12 @@
 # zzuthesis模版
 
-⚠️由于网络原因，github仓库可能下载速度很慢，请移步https://gitee.com/fylimas/zzuthesis ，但是从gitee下载，需要注册登录😂。
+⚠️由于网络原因，[github上zzuthesis仓库](https://github.com/fylimas/zzuthesis.git)可能下载速度很慢，请移步[gitee上zzuthesis仓库](https://gitee.com/fylimas/zzuthesis) ，但是从gitee下载，需要注册登录😂。
 
 zzuthesis模版是参照《郑州大学学位论文写作规范格式》编制的非官方LaTeX模版，目的是摆脱word公式、图表、参考文献的图注、交叉引用的奇奇怪怪的问题，并提前学习和了解学术界的事实排版工具TeX。
 
-zzuthesis最早由Xiaoshuai Yuan以清华大学thuthesis的LaTeX模版为蓝本，根据《郑州大学物理工程学院本科毕业设计（论文）基本规范》和《郑州大学学位论文写作规范格式》修改得到，见https://github.com/tuxify/zzuthesis。
+zzuthesis最早由Xiaoshuai Yuan以清华大学thuthesis的LaTeX模版为蓝本，根据《郑州大学学位论文写作规范格式》修改得到，见https://github.com/tuxify/zzuthesis。本模版在Xiaoshuai Yuan的基础上，参照
 
-本模版在Xiaoshuai Yuan的基础上，做了如下一些极其微小的工作：1. 修复了一些bug；2. 更新了模版内容；3. 参照电气与信息工程学院规范修改。
+针对最新[郑州大学学位论文写作规范](http://gs.zzu.edu.cn/info/1045/6818.htm)和[学位论文原创性声明 使用授权声明](http://gs.zzu.edu.cn/info/1053/11828.htm)做了进一步修正：1. 修复了一些bug；2. 更正中文封面页格式、英文摘要字体、声明页内容、参考文献、致谢、个人简历等格式。
 
 # 1. 使用方法
 

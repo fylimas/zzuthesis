@@ -565,8 +565,9 @@
       \end{minipage}
       \vskip \stretch{1}
       \begin{center}
-        {\ziju{18bp}\chuhao\xingkai\zzu@schoolname}
-        \par\vskip.6cm
+        %{\ziju{18bp}\chuhao\xingkai\zzu@schoolname}
+        {\includegraphics[height=1.9cm]{zzdx}}
+        \par\vskip.8cm
         {\ziju{18bp}\xiaochu\sffamily\zzu@subtitle}
         \vskip \stretch{1}
         \kaishu\erhao[1.5] \zzu@ctitle

@@ -2,14 +2,14 @@
 %% Filename: zzuthesis.cls
 %% Encoding: UTF-8
 %% Based on: Yuan Xiaoshuai - yxshuai@gmail.com
-%% 最后修改：李方圆，2023年4月4日
+%% 最后修改：李方圆，2023年4月9日
 %%================================================
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 标识节(Identification)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{zzuthesis}
-[2023/04/08 Zhengzhou University Thesis Template]
+[2023/04/09 Zhengzhou University Thesis Template]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 声明选项(Declaration options)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -298,8 +298,8 @@
   {0.5ex}%Space above
   {0.5ex}%Space below
   {\rmfamily}%Body font
-  {}%Indent amount 
-  {\sffamily}%Theorem head font
+  {\parindent}%Indent amount 
+  {\rmfamily\bfseries}%Theorem head font
   {\zzu@theorem@separator}%Punctuation after theorem head
   {1em}%Space after theorem head
   {}%Theorem head spec
@@ -307,10 +307,16 @@
   \pushQED{\qed}%
   \normalfont \topsep6\p@\@plus6\p@\relax
   \trivlist
-  \item[\hskip\labelsep
-  \sffamily
-  #1\@addpunct{\quad}]\ignorespaces}
-  {\popQED\endtrivlist\@endpefalse}
+  \item\relax\hskip\parindent
+  \textbf{#1}
+  \@addpunct{\quad}\ignorespaces
+%  \item[\hskip\parindent
+%  \rmfamily\bfseries
+%  #1\@addpunct{\quad}]\ignorespaces
+  }{
+  \popQED\endtrivlist\@endpefalse
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 章节标题
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -549,7 +555,7 @@
         \setlength{\zzu@title@width}{6em}
         \begin{tabular}{p{\zzu@title@width}@{~}l}
           \zzu@put@title{\zzu@schoolcode@title} & 
-            \zzu@underline[9em]{\zzu@schoolcode}\\[1ex]
+            \zzu@underline[9em]{\kai\zzu@schoolcode}\\[1ex]
           \zzu@put@title{\zzu@id@title} & 
             \zzu@underline[9em]{\zzu@id}\\[1ex]
           \zzu@put@title{\zzu@secretlevel@title} & 

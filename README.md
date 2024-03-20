@@ -1,3 +1,5 @@
+⚠️⚠️⚠️【不再维护】本仓库最初目的是为了减轻组内学生书写负担，特别是对于郑大电信学院，轻大李老师重头建立了新一版模版。这太好了，我就不需要花精力维护了，感谢机器人实验室/刘老师李老师，谢谢大家支持！
+
 # zzuthesis模版
 
 ⚠️由于网络原因，[github上zzuthesis仓库](https://github.com/fylimas/zzuthesis.git)可能下载速度很慢，请移步[gitee上zzuthesis仓库](https://gitee.com/fylimas/zzuthesis) ，但是从gitee下载，需要注册登录😂。
